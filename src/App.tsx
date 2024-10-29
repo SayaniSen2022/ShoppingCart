@@ -3,6 +3,7 @@ import { useQuery } from "react-query";
 //components
 import Item from "./Item/Item";
 import Cart from "./Cart/Cart";
+import Navbar from "./Navbar/Navbar";
 import Drawer from "@material-ui/core/Drawer";
 import LinearProgress from "@material-ui/core/LinearProgress";
 import Grid from "@material-ui/core/Grid";
@@ -73,6 +74,7 @@ function App() {
   //we use optional chaining to handle the case when data is undefined
   return (
     <Wrapper>
+      <Navbar/>
       <Drawer
         anchor="right"
         open={cartOpen}
@@ -92,12 +94,12 @@ function App() {
         }}
       >
         <Badge badgeContent={getTotalItems(cartItems)} color="error">
-          <AddShoppingCartIcon />
+          <AddShoppingCartIcon fontSize="large" />
         </Badge>
       </StyledButton>
       <Grid container spacing={3}>
         {data?.map((item) => (
-          <Grid item key={item.id} xs={12} sm={4}>
+          <Grid item key={item.id} xs={12} sm={2}>
             <Item item={item} handleAddToCart={handleAddToCart} />
           </Grid>
         ))}

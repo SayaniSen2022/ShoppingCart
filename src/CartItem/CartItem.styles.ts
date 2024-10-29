@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Wrapper = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   font-family: Arial, Helvetica, sans-serif;
   border-bottom: 1px solid lightblue;
   padding-bottom: 20px;
@@ -19,7 +19,7 @@ export const Wrapper = styled.div`
 
   img {
     max-width: 80px;
-    object-fit: cover;
+    object-fit: contain;
     margin-left: 40px;
   }
 `;

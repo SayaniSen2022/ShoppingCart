@@ -10,13 +10,19 @@ export const Wrapper = styled.div`
   height: 100%;
 
   button {
-    border-radius: 0 0 20px 20px;
+    border-radius: 5px;
+    margin: 10px;
+    background: #d2ecf5;
+    color: #000;
+    font-size: 15px;
+    font-weight: 600;
   }
 
   img {
-    max-height: 250px;
-    object-fit: cover;
+    max-height: 153px;
+    object-fit: contain;
     border-radius: 20px 20px 0 0;
+    padding: 10px;
   }
 
   div {
